@@ -10,31 +10,10 @@ class Pokemon {
     isLucky() {
         return Math.random() < this.luck
     }
-
-    getName() {
-        return this.name
-    }
-
-    getAttack() {
-        return this.attack
-    }
-
-    getDefense() {
-        return this.defense
-    }
-
-    getHP() {
-        return this.hp
-    }
-
-    getLuck() {
-        return this.luck
-    }
-
 }
 
 function attackPokemon() {
-    return listPokemon[pokemonAttaquant].getAttack() - listPokemon[pokemonDefendant].getDefense()
+    return listPokemon[pokemonAttaquant].attack - listPokemon[pokemonDefendant].defense
 }
 
 
@@ -72,6 +51,7 @@ while (listPokemon[pokemonAttaquant].hp > 0 && listPokemon[pokemonDefendant].hp 
         pokemonAttaquant = 0
         pokemonDefendant = 1
     }
+    
 }
 
 if (listPokemon[pokemonDefendant].hp > 0) {
