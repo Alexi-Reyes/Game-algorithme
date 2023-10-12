@@ -45,13 +45,11 @@ while (listPokemon[pokemonAttaquant].hp > 0 && listPokemon[pokemonDefendant].hp 
     tour += 1
     console.log("")
     if (pokemonAttaquant == 0) {
-        pokemonAttaquant = 1
-        pokemonDefendant = 0
+        [pokemonAttaquant, pokemonDefendant] = [1, 0]
     } else {
-        pokemonAttaquant = 0
-        pokemonDefendant = 1
+        [pokemonAttaquant, pokemonDefendant] = [0, 1]
     }
-    
+
 }
 
 if (listPokemon[pokemonDefendant].hp > 0) {
@@ -60,4 +58,4 @@ if (listPokemon[pokemonDefendant].hp > 0) {
     pokemonGagnant = listPokemon[pokemonAttaquant].name
 }
 
-console.log("Fin. " + String(pokemonGagnant) + " gagne.")
+console.log("Fin. " + pokemonGagnant + " gagne.")

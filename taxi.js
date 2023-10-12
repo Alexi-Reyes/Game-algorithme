@@ -9,8 +9,6 @@ let trajet = {
     changement: 0
 }
 
-tour = 0
-
 console.log(personne.name + " rentre en taxi.")
 while (trajet.feux != 0) {
     let musicPlayed = trajet.radio[Math.floor(Math.random() * 5)]
@@ -21,6 +19,7 @@ while (trajet.feux != 0) {
         console.log(personne.name + " prend des dégats. -1 HP")
         console.log("Point de vie restant: " + personne.hp)
         trajet.feux += 1
+        trajet.changement += 1
     }
 
     trajet.feux -= 1
@@ -33,5 +32,5 @@ while (trajet.feux != 0) {
 
 }
 if (personne.hp != 0) {
-    console.log(personne.name + " arrive chez lui.")
+    console.log(personne.name + " arrive chez lui avec " + trajet.changement + " changements.")
 }
