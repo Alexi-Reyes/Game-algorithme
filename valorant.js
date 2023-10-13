@@ -53,5 +53,5 @@ while (manchesGagneesAttack != 13 && manchesGagneesDefense != 13) {
 
 }
 
-console.log("Team Attack gangne " + manchesGagneesAttack + " manches")
-console.log("Team Defense gangne " + manchesGagneesDefense + " manches")
+console.log("Team Attack gagne " + manchesGagneesAttack + " manches")
+console.log("Team Defense gagne " + manchesGagneesDefense + " manches")
